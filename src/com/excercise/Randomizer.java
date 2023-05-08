@@ -1,12 +1,21 @@
 package com.excercise;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
+
 public class Randomizer {
 
 
-//                List<String> list = Arrays.asList("Rock", "Paper", "Scissors");
-//                Random random = new Random();
-//                int indexList = random.nextInt(list.size());
-//                String getEnemyChoice = list.get(indexList);
+                List<String> list = Arrays.asList("Rock", "Paper", "Scissors");
+                Random random = new Random();
+
+
+                public String randomChoice() {
+                    int indexList = random.nextInt(list.size());
+                    return list.get(indexList);
+                }
+
 
 
 

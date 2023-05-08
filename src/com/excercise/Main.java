@@ -9,6 +9,8 @@ public class Main {
 
     public static void main(String[] args) {
 
+        Randomizer randomizer = new Randomizer();
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Rock, Paper or Scissors Game");
         System.out.println("Rules: If you win a match = you get 2 points, draw = 1 point, lose = 0 points");
@@ -16,18 +18,20 @@ public class Main {
         boolean programWorking = true;
         GameMechanics gameMechanics = new GameMechanics();
 
-    public void randomChoice() {
-            List<String> list = Arrays.asList("Rock", "Paper", "Scissors");
-            Random random = new Random();
+        List<String> list = Arrays.asList("Rock", "Paper", "Scissors");
+        Random random = new Random();
+
+
+
+
             int indexList = random.nextInt(list.size());
             String getEnemyChoice = list.get(indexList);
-        }
 
 
         while(programWorking) {
 
-
-
+            randomizer.randomChoice();
+            System.out.println();
             System.out.println("Choose your number:");
             System.out.println("1. Rock");
             System.out.println("2. Paper");
