@@ -1,4 +1,4 @@
-package com.excercise;
+package com.exercise;
 
 public class Player {
 

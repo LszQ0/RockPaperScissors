@@ -1,4 +1,4 @@
-package com.excercise;
+package com.exercise;
 
 public class GameMechanics {
 
@@ -79,29 +79,29 @@ public class GameMechanics {
     }
 
     public void playerWin() {
-//        player.playerWins++;
-//        computer.computerLoses++;
-//        player.playerPoints += 2;
+        player.playerWins++;
+        computer.computerLoses++;
+        player.playerPoints += 2;
     }
 
     public void computerWin() {
-//        computer.computerWins++;
-//        player.playerLoses++;
-//        computer.computerPoints += 2;
+        computer.computerWins++;
+        player.playerLoses++;
+        computer.computerPoints += 2;
     }
 
     public void drawMatch() {
-//        player.playerDraws++;
-//        computer.computerDraws++;
-//        player.playerPoints++;
-//        computer.computerPoints++;
+        player.playerDraws++;
+        computer.computerDraws++;
+        player.playerPoints++;
+        computer.computerPoints++;
     }
 
-//    public void score() {
-//        player.getPlayerScore();
-//        computer.getComputerScore();
-//
-//    }
+    public void score() {
+        player.getPlayerScore();
+        computer.getComputerScore();
+
+    }
 //
 //    Player player = new Player(playerWins, playerDraws; playerLoses; playerPoints);
 //    Computer computer = new Computer(computerWins, computerDraws; computerLoses; computerPoints);

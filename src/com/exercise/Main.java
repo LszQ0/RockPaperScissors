@@ -1,4 +1,4 @@
-package com.excercise;
+package com.exercise;
 
 import java.util.Scanner;
 
@@ -35,7 +35,7 @@ public class Main {
                 case 1 -> gameMechanics.rock();
                 case 2 -> gameMechanics.paper();
                 case 3 -> gameMechanics.scissors();
-//                case 4 -> gameMechanics.score();
+                case 4 -> gameMechanics.score();
                 case 5 -> programWorking = false;
                 default -> System.out.println("Choose valid number");
 
