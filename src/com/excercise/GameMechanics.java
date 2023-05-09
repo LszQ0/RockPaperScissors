@@ -3,74 +3,108 @@ package com.excercise;
 public class GameMechanics {
 
     Randomizer randomizer = new Randomizer();
+    Player player = new Player(0,0,0,0);
+    Computer computer = new Computer(0,0,0,0);
     String playersChoice = "";
-    int playerWins = 0;
-    int playerDraws = 0;
-    int playerLoses = 0;
-    int computerWins = 0;
-    int computerDraws = 0;
-    int computerLoses = 0;
-    int playerPoints = 0;
-    int computerPoints = 0;
+    String computerChoice = randomizer.randomChoice();
 
 
     public void rock() {
         playersChoice = "Rock";
-        if (playersChoice.equalsIgnoreCase(randomizer.randomChoice())){
-            System.out.println("Player: " + playersChoice + ", Computer: " + randomizer.randomChoice());
+        if (playersChoice.equalsIgnoreCase(computerChoice)){
+            System.out.println("Player: " + playersChoice + ", Computer: " + computerChoice);
             System.out.println("Rock vs rock. It's a tie!");
-            playerDraws++;
-            computerDraws++;
-        } else if (randomizer.randomChoice().equalsIgnoreCase("Paper")) {
-            System.out.println("Player: " + playersChoice + ", Computer: " + randomizer.randomChoice());
-            System.out.println("Rock vs paper. You lose!");
-            computerWins++;
-        } else {
-            System.out.println("Player: " + playersChoice + ", Computer: " + randomizer.randomChoice());
-            System.out.println("Rock vs scissors. You win!");
-            playerWins++;
-        }
+            drawMatch();
+            computerChoice = randomizer.randomChoice();
 
+        } else if (computerChoice.equalsIgnoreCase("Paper")) {
+            System.out.println("Player: " + playersChoice + ", Computer: " + computerChoice);
+            System.out.println("Rock vs paper. You lose!");
+            computerWin();
+            computerChoice = randomizer.randomChoice();
+
+
+        } else {
+            System.out.println("Player: " + playersChoice + ", Computer: " + computerChoice);
+            System.out.println("Rock vs scissors. You win!");
+            playerWin();
+            computerChoice = randomizer.randomChoice();
+        }
     }
+
     public void paper() {
         playersChoice = "Paper";
-        if (playersChoice.equalsIgnoreCase(randomizer.randomChoice())){
-            System.out.println("Player: " + playersChoice + ", Computer: " + randomizer.randomChoice());
+        if (playersChoice.equalsIgnoreCase(computerChoice)){
+            System.out.println("Player: " + playersChoice + ", Computer: " + computerChoice);
             System.out.println("Paper vs paper. It's a tie!");
-            playerDraws++;
-            computerDraws++;
-        } else if (randomizer.randomChoice().equalsIgnoreCase("Scissors")) {
-            System.out.println("Player: " + playersChoice + ", Computer: " + randomizer.randomChoice());
+            drawMatch();
+            computerChoice = randomizer.randomChoice();
+
+        } else if (computerChoice.equalsIgnoreCase("Scissors")) {
+            System.out.println("Player: " + playersChoice + ", Computer: " + computerChoice);
             System.out.println("Paper vs scissors. You lose!");
-            computerWins++;
+            computerWin();
+            computerChoice = randomizer.randomChoice();
+
         } else {
-            System.out.println("Player: " + playersChoice + ", Computer: " + randomizer.randomChoice());
+            System.out.println("Player: " + playersChoice + ", Computer: " + computerChoice);
             System.out.println("Paper vs rock. You win!");
-            playerWins++;
-        }
-    }
-    public void scissors() {
-        playersChoice = "Scissors";
-        if (playersChoice.equalsIgnoreCase(randomizer.randomChoice())){
-            System.out.println("Player: " + playersChoice + ", Computer: " + randomizer.randomChoice());
-            System.out.println("Scissors vs scissors. It's a tie!");
-            playerDraws++;
-            computerDraws++;
-        } else if (randomizer.randomChoice().equalsIgnoreCase("Rock")) {
-            System.out.println("Player: " + playersChoice + ", Computer: " + randomizer.randomChoice());
-            System.out.println("Scissors vs Rock. You lose!");
-            computerWins++;
-        } else {
-            System.out.println("Player: " + playersChoice + ", Computer: " + randomizer.randomChoice());
-            System.out.println("Scissors vs paper. You win!");
-            playerWins++;
+            playerWin();
+            computerChoice = randomizer.randomChoice();
         }
     }
 
-    public void score() {
-        System.out.println("Score:");
-        System.out.println("Player - " + playerWins);
-        System.out.println("Computer - " + computerWins);
+    public void scissors() {
+        playersChoice = "Scissors";
+        if (playersChoice.equalsIgnoreCase(computerChoice)){
+            System.out.println("Player: " + playersChoice + ", Computer: " + computerChoice);
+            System.out.println("Scissors vs scissors. It's a tie!");
+            drawMatch();
+            computerChoice = randomizer.randomChoice();
+
+        } else if (computerChoice.equalsIgnoreCase("Rock")) {
+            System.out.println("Player: " + playersChoice + ", Computer: " + computerChoice);
+            System.out.println("Scissors vs rock. You lose!");
+            computerWin();
+            computerChoice = randomizer.randomChoice();
+
+        } else {
+            System.out.println("Player: " + playersChoice + ", Computer: " + computerChoice);
+            System.out.println("Scissors vs paper. You win!");
+            playerWin();
+            computerChoice = randomizer.randomChoice();
+
+
+        }
     }
+
+    public void playerWin() {
+//        player.playerWins++;
+//        computer.computerLoses++;
+//        player.playerPoints += 2;
+    }
+
+    public void computerWin() {
+//        computer.computerWins++;
+//        player.playerLoses++;
+//        computer.computerPoints += 2;
+    }
+
+    public void drawMatch() {
+//        player.playerDraws++;
+//        computer.computerDraws++;
+//        player.playerPoints++;
+//        computer.computerPoints++;
+    }
+
+//    public void score() {
+//        player.getPlayerScore();
+//        computer.getComputerScore();
+//
+//    }
+//
+//    Player player = new Player(playerWins, playerDraws; playerLoses; playerPoints);
+//    Computer computer = new Computer(computerWins, computerDraws; computerLoses; computerPoints);
+
 
 }
