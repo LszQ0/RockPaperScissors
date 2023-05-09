@@ -15,23 +15,6 @@ public class Player {
     }
 
 
-
-    public int getPlayerWins() {
-        return playerWins;
-    }
-
-    public int getPlayerDraws() {
-        return playerDraws;
-    }
-
-    public int getPlayerLoses() {
-        return playerLoses;
-    }
-
-    public int getPlayerPoints() {
-        return playerPoints;
-    }
-
     public void getPlayerScore() {
         System.out.println("Player results:");
         System.out.println("Wins: " + playerWins);

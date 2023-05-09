@@ -100,11 +100,19 @@ public class GameMechanics {
     public void score() {
         player.getPlayerScore();
         computer.getComputerScore();
-
     }
-//
-//    Player player = new Player(playerWins, playerDraws; playerLoses; playerPoints);
-//    Computer computer = new Computer(computerWins, computerDraws; computerLoses; computerPoints);
 
+    public void isGameWon() {
+        if (player.playerPoints > computer.computerPoints) {
+            System.out.println("Congratulations. You got more points than computer.");
+            System.out.println("Player: " + player.playerPoints + " Computer: " + computer.computerPoints);
+        } else if (player.playerPoints < computer.computerPoints) {
+            System.out.println("Better luck next time. You got less points than computer.");
+            System.out.println("Player: " + player.playerPoints + " Computer: " + computer.computerPoints);
+        } else {
+            System.out.println("It's quite rare to see - a draw!");
+            System.out.println("Player: " + player.playerPoints + " Computer: " + computer.computerPoints);
+        }
+    }
 
 }

@@ -14,22 +14,6 @@ public class Computer {
         this.computerPoints = computerPoints;
     }
 
-    public int getComputerWins() {
-        return computerWins;
-    }
-
-    public int getComputerDraws() {
-        return computerDraws;
-    }
-
-    public int getComputerLoses() {
-        return computerLoses;
-    }
-
-    public int getComputerPoints() {
-        return computerPoints;
-    }
-
     public void getComputerScore() {
         System.out.println("Computer results:");
         System.out.println("Wins: " + computerWins);
